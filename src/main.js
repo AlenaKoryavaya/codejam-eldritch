@@ -76,3 +76,4 @@ function showMixingContainer() {
   mixingCont.classList.add("mixing-active");
 }
 mixDescBtn.addEventListener("click", showMixingContainer);
+console.log("Hello");
