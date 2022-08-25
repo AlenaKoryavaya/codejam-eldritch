@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Codejam-eldritch</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="main__inner">
+            <!-- Древние -->
+            <div class="ancients-container">
+                <div class="ancients-left">
+                    <div class="ancient-item">
+                        <img id="azathoth" class="ancient-img" src="./assets/Ancients/Azathoth.png" alt="Azathoth">
+                    </div>
+                    <div class="ancient-item">
+                        <img id="cthulthu" class="ancient-img" src="./assets/Ancients/Cthulthu.png" alt="Cthulthu">
+                    </div>
+                </div>
+
+                <div class="ancients-right">
+                    <div class="ancient-item">
+                        <img id="iogSothoth" class="ancient-img" src="./assets/Ancients/IogSothoth.png"
+                            alt="IogSothoth">
+                    </div>
+                    <div class="ancient-item">
+                        <img id="shubNiggurath" class="ancient-img" src="./assets/Ancients/ShubNiggurath.png"
+                            alt="ShubNiggurath">
+                    </div>
+                </div>
+            </div>
+            <!-- / Древние -->
+
+            <!-- Уровни -->
+            <div id="levels" class="levels-container">
+                <button id="level_1" class="level-item item1">Очень легкий</button>
+                <button id="level_2" class="level-item item2">Легкий</button>
+                <button id="level_3" class="level-item item3">Средний</button>
+                <button id="level_4" class="level-item item4">Сложный</button>
+                <button id="level_5" class="level-item item5">Очень сложный</button>
+            </div>
+            <!-- / Уровни -->
+
+            <!--  Кнопка для замешивания -->
+            <div id="mix-button" class="mix-btn-container">
+                <button id="mix-desc" class="mix-btn">Замешать колоду</button>
+            </div>
+            <!-- / Кнопка для замешивания  -->
+
+            <!--  Замешать колоду -->
+            <div id="mixing" class="mixing-cards-container">
+
+                <div class="stages-container">
+                    <p class="stage-name">Первая стадия</p>
+                    <div class="stage-item">
+                        <div class="counter counter-first">0</div>
+                        <div class="counter counter-second">0</div>
+                        <div class="counter counter-third">0</div>
+                    </div>
+                    <p class="stage-name">Вторая стадия</p>
+                    <div class="stage-item">
+                        <div class="counter counter-first">0</div>
+                        <div class="counter counter-second">0</div>
+                        <div class="counter counter-third">0</div>
+                    </div>
+                    <p class="stage-name">Третья стадия</p>
+                    <div class="stage-item">
+                        <div class="counter counter-first">0</div>
+                        <div class="counter counter-second">0</div>
+                        <div class="counter counter-third">0</div>
+                    </div>
+                </div>
+
+                <div class="desc">
+                    <img class="desc-bg" src="./assets/mythicCardBackground.png" alt="mythicCardBackground">
+                    <img class="desc-bg" src="./assets/mythicCardBackground.png" alt="mythicCardBackground">
+                </div>
+            </div>
+            <!-- / Замешать колоду -->
+
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
