@@ -143,13 +143,15 @@ body {
 .mix-btn:hover {
   background-color: rgb(255 255 255 / 0.2);
 }
-.mix-btn-active1 {
+.mix-btn-active1,
+.mix-btn-active2 {
   background-color: var(--easy-level-bg);
 }
 .mix-btn-active3 {
   background-color: var(--middle-level-bg);
 }
-.mix-btn-active4 {
+.mix-btn-active4,
+.mix-btn-active5 {
   background-color: var(--hard-level);
 }
 
@@ -206,4 +208,11 @@ body {
 }
 .desc-bg:first-child {
   margin-right: 50px;
+}
+.desc-front {
+  width: 130px;
+  height: 190px;
+  cursor: pointer;
+  background-size: contain;
+  /* background-image: url("../assets/MythicCards/green/green1.png"); */
 }

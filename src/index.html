@@ -58,27 +58,28 @@
                 <div class="stages-container">
                     <p class="stage-name">Первая стадия</p>
                     <div class="stage-item">
-                        <div class="counter counter-first">0</div>
-                        <div class="counter counter-second">0</div>
-                        <div class="counter counter-third">0</div>
+                        <div id="green-first" class="counter counter-first">0</div>
+                        <div id="brown-first" class="counter counter-second">0</div>
+                        <div id="blue-first" class="counter counter-third">0</div>
                     </div>
                     <p class="stage-name">Вторая стадия</p>
                     <div class="stage-item">
-                        <div class="counter counter-first">0</div>
-                        <div class="counter counter-second">0</div>
-                        <div class="counter counter-third">0</div>
+                        <div id="green-second" class="counter counter-first">0</div>
+                        <div id="brown-second" class="counter counter-second">0</div>
+                        <div id="blue-second" class="counter counter-third">0</div>
                     </div>
                     <p class="stage-name">Третья стадия</p>
                     <div class="stage-item">
-                        <div class="counter counter-first">0</div>
-                        <div class="counter counter-second">0</div>
-                        <div class="counter counter-third">0</div>
+                        <div id="green-third" class="counter counter-first">0</div>
+                        <div id="brown-third" class="counter counter-second">0</div>
+                        <div id="blue-third" class="counter counter-third">0</div>
                     </div>
                 </div>
 
                 <div class="desc">
-                    <img class="desc-bg" src="../assets/mythicCardBackground.png" alt="mythicCardBackground">
-                    <img class="desc-bg" src="../assets/mythicCardBackground.png" alt="mythicCardBackground">
+                    <img id="back-desc" class="desc-bg" src="../assets/mythicCardBackground.png"
+                        alt="mythicCardBackground">
+                    <div id="front-card" class="desc-front"></div>
                 </div>
             </div>
             <!-- / Замешать колоду -->
@@ -86,7 +87,7 @@
         </div>
     </main>
 
-    <script src="./main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 
 </html>
