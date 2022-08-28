@@ -202,9 +202,17 @@ body {
   padding-bottom: 20px;
 }
 .desc-bg {
+  position: relative;
+  z-index: 1;
+  display: flex;
   width: 130px;
   height: 190px;
   cursor: pointer;
+  opacity: 1;
+}
+.desc-bg-hide {
+  opacity: 0;
+  z-index: -1;
 }
 .desc-bg:first-child {
   margin-right: 50px;
