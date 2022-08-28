@@ -314,7 +314,6 @@ function showAzathothEasylevel() {
   let i = 0;
 
   backDescBtn.addEventListener("click", () => {
-    console.log(merged[i]);
     frontCard.style.backgroundImage = `url("${merged[i]}")`;
     i++;
     if (i === merged.length) {
@@ -711,7 +710,6 @@ function showAzathothNormallevel() {
   let i = 0;
 
   backDescBtn.addEventListener("click", () => {
-    console.log(merged[i]);
     frontCard.style.backgroundImage = `url("${merged[i]}")`;
     i++;
     if (i === merged.length) {
@@ -808,7 +806,6 @@ function showCthulthuNormallevel() {
   let i = 0;
 
   backDescBtn.addEventListener("click", () => {
-    console.log(merged[i]);
     frontCard.style.backgroundImage = `url("${merged[i]}")`;
     i++;
     if (i === merged.length) {
@@ -905,7 +902,6 @@ function showIogSothothNormallevel() {
   let i = 0;
 
   backDescBtn.addEventListener("click", () => {
-    console.log(merged[i]);
     frontCard.style.backgroundImage = `url("${merged[i]}")`;
     i++;
     if (i === merged.length) {
@@ -1002,7 +998,6 @@ function showShubNiggurathNormallevel() {
   let i = 0;
 
   backDescBtn.addEventListener("click", () => {
-    console.log(merged[i]);
     frontCard.style.backgroundImage = `url("${merged[i]}")`;
     i++;
     if (i === merged.length) {
@@ -1096,11 +1091,308 @@ function buildAzathothHardLevel() {
   azathothHardlevel.push(azathothFirstStep);
   azathothHardlevel.push(azathothSecondStep);
   azathothHardlevel.push(azathothThirdStep);
-  console.log(azathothHardlevel);
 }
 
 function showAzathothHardlevel() {
   let merged = azathothHardlevel.flat();
+  let i = 0;
+
+  backDescBtn.addEventListener("click", () => {
+    frontCard.style.backgroundImage = `url("${merged[i]}")`;
+    i++;
+    if (i === merged.length) {
+      backDescBtn.classList.add("desc-bg-hide");
+    }
+  });
+}
+
+// ----------------------- Cthulthu -------------------------------------
+
+let cthulthuHardlevel = [];
+
+function buildCthulthuHardLevel() {
+  cthulthuHardlevel = [];
+  let cthulthuFirstStep = [];
+  let cthulthuSecondStep = [];
+  let cthulthuThirdStep = [];
+
+  const greenHardLevel = [...greenHard];
+  const brownHardLevel = [...brownHard];
+  const blueHardLevel = [...blueHard];
+
+  const brownNormalLevel = [...brownNormal];
+
+  // --------------------------  Распределяем зеленый цвет ------------------------------
+  const greenFirstStep = 0;
+  const greenSecondStep = 1;
+  const greenThirdStep = 3;
+
+  for (let i = 0; i < greenFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    cthulthuFirstStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < greenSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    cthulthuSecondStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < greenThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    cthulthuThirdStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  document.querySelector("#green-first").textContent = greenFirstStep;
+  document.querySelector("#green-second").textContent = greenSecondStep;
+  document.querySelector("#green-third").textContent = greenThirdStep;
+
+  // -------------------------  Распределяем коричневый цвет ------------------------------
+  const brownFirstStep = 2;
+  const brownSecondStep = 3;
+  const brownThirdStep = 4;
+
+  for (let i = 0; i < brownFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownHardLevel.length);
+    cthulthuFirstStep.push(brownHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < brownSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownHardLevel.length);
+    cthulthuSecondStep.push(brownHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < brownThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownNormalLevel.length);
+    cthulthuThirdStep.push(brownNormalLevel.splice(randomCard, 1).join());
+  }
+
+  document.querySelector("#brown-first").textContent = brownFirstStep;
+  document.querySelector("#brown-second").textContent = brownSecondStep;
+  document.querySelector("#brown-third").textContent = brownThirdStep;
+
+  // -------------------------  Распределяем синий цвет ------------------------------
+  const blueFirstStep = 2;
+  const blueSecondStep = 0;
+  const blueThirdStep = 0;
+
+  for (let i = 0; i < blueFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    cthulthuFirstStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < blueSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    cthulthuSecondStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < blueThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    cthulthuThirdStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+
+  document.querySelector("#blue-first").textContent = blueFirstStep;
+  document.querySelector("#blue-second").textContent = blueSecondStep;
+  document.querySelector("#blue-third").textContent = blueThirdStep;
+
+  cthulthuHardlevel.push(cthulthuFirstStep);
+  cthulthuHardlevel.push(cthulthuSecondStep);
+  cthulthuHardlevel.push(cthulthuThirdStep);
+}
+
+function showCthulthuHardlevel() {
+  let merged = cthulthuHardlevel.flat();
+  let i = 0;
+
+  backDescBtn.addEventListener("click", () => {
+    frontCard.style.backgroundImage = `url("${merged[i]}")`;
+    i++;
+    if (i === merged.length) {
+      backDescBtn.classList.add("desc-bg-hide");
+    }
+  });
+}
+
+// ----------------------- IogSothoth -------------------------------------
+
+let iogSothothHardlevel = [];
+
+function buildIogSothothHardLevel() {
+  iogSothothHardlevel = [];
+  let iogSothothFirstStep = [];
+  let iogSothothSecondStep = [];
+  let iogSothothThirdStep = [];
+
+  const greenHardLevel = [...greenHard];
+  const brownHardLevel = [...brownHard];
+  const blueHardLevel = [...blueHard];
+
+  const brownNormalLevel = [...brownNormal];
+
+  // --------------------------  Распределяем зеленый цвет ------------------------------
+  const greenFirstStep = 0;
+  const greenSecondStep = 2;
+  const greenThirdStep = 3;
+
+  for (let i = 0; i < greenFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    iogSothothFirstStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < greenSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    iogSothothSecondStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < greenThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    iogSothothThirdStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  document.querySelector("#green-first").textContent = greenFirstStep;
+  document.querySelector("#green-second").textContent = greenSecondStep;
+  document.querySelector("#green-third").textContent = greenThirdStep;
+
+  // -------------------------  Распределяем коричневый цвет ------------------------------
+  const brownFirstStep = 2;
+  const brownSecondStep = 3;
+  const brownThirdStep = 4;
+
+  for (let i = 0; i < brownFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownHardLevel.length);
+    iogSothothFirstStep.push(brownHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < brownSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownHardLevel.length);
+    iogSothothSecondStep.push(brownHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < brownThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownNormalLevel.length);
+    iogSothothThirdStep.push(brownNormalLevel.splice(randomCard, 1).join());
+  }
+
+  document.querySelector("#brown-first").textContent = brownFirstStep;
+  document.querySelector("#brown-second").textContent = brownSecondStep;
+  document.querySelector("#brown-third").textContent = brownThirdStep;
+
+  // -------------------------  Распределяем синий цвет ------------------------------
+  const blueFirstStep = 1;
+  const blueSecondStep = 1;
+  const blueThirdStep = 0;
+
+  for (let i = 0; i < blueFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    iogSothothFirstStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < blueSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    iogSothothSecondStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < blueThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    iogSothothThirdStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+
+  document.querySelector("#blue-first").textContent = blueFirstStep;
+  document.querySelector("#blue-second").textContent = blueSecondStep;
+  document.querySelector("#blue-third").textContent = blueThirdStep;
+
+  iogSothothHardlevel.push(iogSothothFirstStep);
+  iogSothothHardlevel.push(iogSothothSecondStep);
+  iogSothothHardlevel.push(iogSothothThirdStep);
+}
+
+function showIogSothothHardlevel() {
+  let merged = iogSothothHardlevel.flat();
+  let i = 0;
+
+  backDescBtn.addEventListener("click", () => {
+    frontCard.style.backgroundImage = `url("${merged[i]}")`;
+    i++;
+    if (i === merged.length) {
+      backDescBtn.classList.add("desc-bg-hide");
+    }
+  });
+}
+
+// ----------------------- shubNiggurath -------------------------------------
+
+let shubNiggurathHardlevel = [];
+
+function buildShubNiggurathHardLevel() {
+  shubNiggurathHardlevel = [];
+  let shubNiggurathFirstStep = [];
+  let shubNiggurathSecondStep = [];
+  let shubNiggurathThirdStep = [];
+
+  const greenHardLevel = [...greenHard];
+  const brownHardLevel = [...brownHard];
+  const blueHardLevel = [...blueHard];
+
+  const greenNormalLevel = [...greenNormal];
+  const brownNormalLevel = [...brownNormal];
+
+  // --------------------------  Распределяем зеленый цвет ------------------------------
+  const greenFirstStep = 1;
+  const greenSecondStep = 3;
+  const greenThirdStep = 2;
+
+  for (let i = 0; i < greenFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenNormalLevel.length);
+    shubNiggurathFirstStep.push(greenNormalLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < greenSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    shubNiggurathSecondStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < greenThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * greenHardLevel.length);
+    shubNiggurathThirdStep.push(greenHardLevel.splice(randomCard, 1).join());
+  }
+  document.querySelector("#green-first").textContent = greenFirstStep;
+  document.querySelector("#green-second").textContent = greenSecondStep;
+  document.querySelector("#green-third").textContent = greenThirdStep;
+
+  // -------------------------  Распределяем коричневый цвет ------------------------------
+  const brownFirstStep = 2;
+  const brownSecondStep = 2;
+  const brownThirdStep = 4;
+
+  for (let i = 0; i < brownFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownHardLevel.length);
+    shubNiggurathFirstStep.push(brownHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < brownSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownHardLevel.length);
+    shubNiggurathSecondStep.push(brownHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < brownThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * brownNormalLevel.length);
+    shubNiggurathThirdStep.push(brownNormalLevel.splice(randomCard, 1).join());
+  }
+
+  document.querySelector("#brown-first").textContent = brownFirstStep;
+  document.querySelector("#brown-second").textContent = brownSecondStep;
+  document.querySelector("#brown-third").textContent = brownThirdStep;
+
+  // -------------------------  Распределяем синий цвет ------------------------------
+  const blueFirstStep = 1;
+  const blueSecondStep = 1;
+  const blueThirdStep = 0;
+
+  for (let i = 0; i < blueFirstStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    shubNiggurathFirstStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < blueSecondStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    shubNiggurathSecondStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+  for (let i = 0; i < blueThirdStep; i++) {
+    let randomCard = Math.floor(Math.random() * blueHardLevel.length);
+    shubNiggurathThirdStep.push(blueHardLevel.splice(randomCard, 1).join());
+  }
+
+  document.querySelector("#blue-first").textContent = blueFirstStep;
+  document.querySelector("#blue-second").textContent = blueSecondStep;
+  document.querySelector("#blue-third").textContent = blueThirdStep;
+
+  shubNiggurathHardlevel.push(shubNiggurathFirstStep);
+  shubNiggurathHardlevel.push(shubNiggurathSecondStep);
+  shubNiggurathHardlevel.push(shubNiggurathThirdStep);
+}
+
+function showShubNiggurathHardlevel() {
+  let merged = shubNiggurathHardlevel.flat();
   let i = 0;
 
   backDescBtn.addEventListener("click", () => {
