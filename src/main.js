@@ -1,7 +1,81 @@
-import { greenEasy, greenNormal, greenHard } from "../mydata/green_levels.js";
-import { brownEasy, brownNormal, brownHard } from "../mydata/brown_levels.js";
-import { blueEasy, blueNormal, blueHard } from "../mydata/blue_levels.js";
+// import { greenEasy, greenNormal, greenHard } from "../mydata/green_levels.js";
+// import { brownEasy, brownNormal, brownHard } from "../mydata/brown_levels.js";
+// import { blueEasy, blueNormal, blueHard } from "../mydata/blue_levels.js";
+const greenEasy = [
+  "../assets/MythicCards/green/green1.png",
+  "../assets/MythicCards/green/green12.png",
+  "../assets/MythicCards/green/green16.png",
+  "../assets/MythicCards/green/green17.png",
+  "../assets/MythicCards/green/green18.png",
+];
 
+const greenNormal = [
+  "../assets/MythicCards/green/green7.png",
+  "../assets/MythicCards/green/green8.png",
+  "../assets/MythicCards/green/green9.png",
+  "../assets/MythicCards/green/green10.png",
+  "../assets/MythicCards/green/green11.png",
+  "../assets/MythicCards/green/green13.png",
+  "../assets/MythicCards/green/green14.png",
+  "../assets/MythicCards/green/green15.png",
+];
+
+const greenHard = [
+  "../assets/MythicCards/green/green2.png",
+  "../assets/MythicCards/green/green3.png",
+  "../assets/MythicCards/green/green4.png",
+  "../assets/MythicCards/green/green5.png",
+  "../assets/MythicCards/green/green6.png",
+];
+const brownEasy = [
+  "../assets/MythicCards/brown/brown11.png",
+  "../assets/MythicCards/brown/brown12.png",
+  "../assets/MythicCards/brown/brown13.png",
+  "../assets/MythicCards/brown/brown14.png",
+  "../assets/MythicCards/brown/brown21.png",
+];
+
+const brownNormal = [
+  "../assets/MythicCards/brown/brown1.png",
+  "../assets/MythicCards/brown/brown2.png",
+  "../assets/MythicCards/brown/brown3.png",
+  "../assets/MythicCards/brown/brown4.png",
+  "../assets/MythicCards/brown/brown5.png",
+  "../assets/MythicCards/brown/brown15.png",
+  "../assets/MythicCards/brown/brown16.png",
+  "../assets/MythicCards/brown/brown17.png",
+  "../assets/MythicCards/brown/brown18.png",
+  "../assets/MythicCards/brown/brown19.png",
+  "../assets/MythicCards/brown/brown20.png",
+];
+
+const brownHard = [
+  "../assets/MythicCards/brown/brown6.png",
+  "../assets/MythicCards/brown/brown7.png",
+  "../assets/MythicCards/brown/brown8.png",
+  "../assets/MythicCards/brown/brown9.png",
+  "../assets/MythicCards/brown/brown10.png",
+];
+const blueEasy = [
+  "../assets/MythicCards/blue/blue3.png",
+  "../assets/MythicCards/blue/blue4.png",
+  "../assets/MythicCards/blue/blue5.png",
+  "../assets/MythicCards/blue/blue10.png",
+];
+
+const blueNormal = [
+  "../assets/MythicCards/blue/blue7.png",
+  "../assets/MythicCards/blue/blue9.png",
+  "../assets/MythicCards/blue/blue11.png",
+  "../assets/MythicCards/blue/blue12.png",
+];
+
+const blueHard = [
+  "../assets/MythicCards/blue/blue1.png",
+  "../assets/MythicCards/blue/blue2.png",
+  "../assets/MythicCards/blue/blue6.png",
+  "../assets/MythicCards/blue/blue8.png",
+];
 // Древние - отображаем кнопки уровней
 const azathoth = document.querySelector("#azathoth");
 const cthulthu = document.querySelector("#cthulthu");
